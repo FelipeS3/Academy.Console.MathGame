@@ -17,6 +17,14 @@ public class MathGameLogic
         Console.WriteLine("5 - Show history");
         float option = float.Parse(Console.ReadLine());
 
+        if(option < 1 || option > 5)
+        {
+            Console.WriteLine("Invalid option, please select a valid option");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Menu();
+        }
+
         switch (option)
         {
             case 1: Sum(); break;
